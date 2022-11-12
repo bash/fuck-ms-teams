@@ -1,0 +1,3 @@
+[submodule "libraries/MinHook"]
+	path = libraries/MinHook
+	url = git@github.com:TsudaKageyu/minhook.git

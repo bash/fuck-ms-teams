@@ -1,0 +1,21 @@
+[cmake]
+version = "3.15"
+cmkr-include = "CMake/cmkr.cmake"
+
+[project]
+name = "fuck-ms-teams"
+version = "1.0.0"
+description = "Description of the project"
+languages = ["C"]
+
+[target.MinHook]
+type = "static"
+sources = ["libraries/MinHook/**.c", "libraries/MinHook/**.h"]
+include-directories = ["${CMAKE_CURRENT_SOURCE_DIR}"]
+
+[target.fuck-ms-teams]
+type = "shared"
+headers = ["libraries/MinHook/include/*.h"]
+sources = ["src/lib.c"]
+link-libraries = ["MinHook"]
+
